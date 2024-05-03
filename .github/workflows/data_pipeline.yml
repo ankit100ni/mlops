@@ -1,8 +1,7 @@
 name: Data Pipeline
 
 on:
-  pull_request:
-    types: [opened, reopened, edited, synchronize]
+  push:
     branches:
       - main
 
