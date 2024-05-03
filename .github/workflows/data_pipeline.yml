@@ -16,7 +16,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Specify your Python version
+          python-version: '3.10'  # Specify your Python version
         
       - name: Install dependencies
         run: |
@@ -25,7 +25,7 @@ jobs:
         
       - name: Train model and save artifacts
         run: |
-          python train_model.py  # Replace with your script to train the model
+          python trained_model.py  # Replace with your script to train the model
           # Save artifacts to a specific directory
           mkdir -p artifacts
           cp trained_model.pkl artifacts/trained_model.pkl  # Assuming your model is saved as trained_model.pkl
