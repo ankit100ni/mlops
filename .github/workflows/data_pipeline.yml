@@ -31,7 +31,7 @@ jobs:
           cp trained_model.pkl artifacts/trained_model.pkl  # Assuming your model is saved as trained_model.pkl
           
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: trained-model-artifacts
           path: artifacts/
