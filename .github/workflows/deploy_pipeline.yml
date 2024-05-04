@@ -30,7 +30,7 @@ jobs:
         env:
           DOCKER_REGISTRY: ankit100ni.azurecr.io  # Replace with your ACR URL
           IMAGE_NAME: ml-flask-app:latest
-          IMAGE_TAG: latest
+          IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
           docker login $DOCKER_REGISTRY -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
