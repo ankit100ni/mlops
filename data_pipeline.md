@@ -2,7 +2,7 @@
 
 ## Overview
 
-![Alt text](mlops\data.png?raw=true "Data Pipeline")
+![Alt text](data.png?raw=true "Data Pipeline")
 
 The data pipeline is responsible for training the machine learning model, generating artifacts, and storing them for further use in the deployment pipeline.
 
