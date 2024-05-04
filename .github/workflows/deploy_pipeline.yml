@@ -14,12 +14,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: static-site
-      - name: Test artifacts Download
-        run: ls -R; date
+      # - name: Download artifacts
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: static-site
+      # - name: Test artifacts Download
+      #   run: ls -R; date
 
       - name: Set up Azure CLI
         uses: azure/login@v1
@@ -41,9 +41,3 @@ jobs:
 
       - name: Deploy to AKS
         run: kubectl apply -f deployment.yaml
-
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test artifacts Download
-        run: ls -R; date
