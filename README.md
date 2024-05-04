@@ -71,3 +71,4 @@ MLOps, short for Machine Learning Operations, is a set of practices and principl
 - [MLOps: Continuous Delivery of ML Models](https://www.analyticsvidhya.com/blog/2020/10/mlops-for-deployment-of-machine-learning-models/)
 - [Google MLOps Guide](https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
 - [Microsoft Azure MLOps](https://docs.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
+
