@@ -29,6 +29,16 @@ jobs:
           # Save artifacts to a specific directory
           mkdir -p artifacts
           cp trained_model.pkl artifacts/trained_model.pkl  # Assuming your model is saved as trained_model.pkl
+
+      - name: Build and push Docker image
+        env:
+          DOCKER_REGISTRY: ankit100ni.azurecr.io
+          IMAGE_NAME: ml-flask-app
+          IMAGE_TAG: latest
+        run: |
+          docker build -t $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
+          docker login $DOCKER_REGISTRY -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
+          docker push $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
