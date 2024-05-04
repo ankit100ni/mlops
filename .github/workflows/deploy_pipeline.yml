@@ -41,3 +41,9 @@ jobs:
 
       - name: Deploy to AKS
         run: kubectl apply -f deployment.yaml
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test artifacts Download
+        run: ls -R; date
