@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: filler_job
         run: hostname
-        
+
   build-and-push-image:
     runs-on: ubuntu-latest
-    needs: data_pipeline
+    needs: train
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
