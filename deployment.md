@@ -2,11 +2,13 @@
 
 ## Overview
 
+![Alt text](deploy.png?raw=true "Deployment Pipeline")
+
 This deployment pipeline automates the deployment of a trained machine learning model into an Azure Kubernetes Service (AKS) cluster. It utilizes GitHub Actions triggered by new artifacts from a data pipeline.
 
 ## Prerequisites
 
-1. Docker hub Container Registry (ACR) to store Docker images.
+1. Azure Container Registry (ACR) to store Docker images.
 2. Azure Kubernetes Service (AKS) cluster.
 3. GitHub repository with ML model code, Dockerfile, and Kubernetes YAML files.
 
@@ -15,7 +17,7 @@ This deployment pipeline automates the deployment of a trained machine learning 
 1. **Checkout Code**: Retrieves code from GitHub repository.
 2. **Download Artifacts**: Fetches artifacts (trained model, dependencies) from data pipeline.
 3. **Build Docker Image**: Creates Docker image with model and dependencies.
-4. **Push Docker Image**: Stores Docker image in Docker hub Container Registry.
+4. **Push Docker Image**: Stores Docker image in Azure Container Registry.
 5. **Azure Login**: Logs into Azure for deployment.
 6. **Deploy to AKS**: Deploys Docker image to Azure Kubernetes Service.
 
