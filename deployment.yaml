@@ -15,5 +15,7 @@ spec:
       containers:
       - name: ml-flask-app
         image: ankit100ni.azurecr.io/ml-flask-app:latest
+      imagePullSecrets:
+      - name: acr-secret
         ports:
         - containerPort: 5000
