@@ -2,7 +2,7 @@
 
 ## Overview
 
-![Alt text](deploy.png?raw=true "Deployment Pipeline")
+![Alt text](deploy_updated.png?raw=true "Deployment Pipeline")
 
 This deployment pipeline automates the deployment of a trained machine learning model into an Azure Kubernetes Service (AKS) cluster. It utilizes GitHub Actions triggered by new artifacts from a data pipeline.
 
