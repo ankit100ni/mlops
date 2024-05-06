@@ -34,11 +34,12 @@ jobs:
         env:
           DOCKER_REGISTRY: ankit100ni.azurecr.io
           IMAGE_NAME: ml-flask-app
-          IMAGE_TAG: ${{ github.sha }}
+          # IMAGE_TAG: ${{ github.sha }}
+          IMAGE_TAG: latest
         run: |
           docker build -t $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
           docker login $DOCKER_REGISTRY -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
-          docker push $DOCKER_REGISTRY/$IMAGE_NAME:latest
+          docker push $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
