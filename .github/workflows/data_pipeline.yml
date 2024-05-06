@@ -38,7 +38,7 @@ jobs:
         run: |
           docker build -t $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
           docker login $DOCKER_REGISTRY -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
-          docker push $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+          docker push $DOCKER_REGISTRY/$IMAGE_NAME:latest
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
