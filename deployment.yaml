@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ml-flask-app
-        image: ankit100ni.azurecr.io/ml-flask-app:latest
+        image: ankit100ni.azurecr.io/ml-flask-app
         ports:
         - containerPort: 5000
       imagePullSecrets:
