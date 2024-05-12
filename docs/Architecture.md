@@ -1,8 +1,10 @@
 # Architecture
 
-## Overview
-
 ![Alt text](arch_diagram.png?raw=true "Data Pipeline")
+
+## Data Pipeline Workflow
+
+### Overview
 
 The data pipeline workflow automates the process of training a machine learning model, saving artifacts, and building/pushing a Docker image to Azure Container Registry (ACR).
 
