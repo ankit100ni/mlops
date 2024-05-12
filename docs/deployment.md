@@ -47,6 +47,7 @@ This deployment pipeline automates the deployment of a trained machine learning 
 ## References
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- [Integraion of Azure Kubernetes Services and Azure Container Registry through CLI](https://learn.microsoft.com/en-us/azure/aks/cluster-container-registry-integration?tabs=azure-cli)
 - [Azure CLI Documentation](https://docs.microsoft.com/en-us/cli/azure)
 - [Azure Kubernetes Service (AKS) Documentation](https://docs.microsoft.com/en-us/azure/aks)
 - [Use GitHub Actions to connect to Azure](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows)
